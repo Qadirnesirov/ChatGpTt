@@ -1,0 +1,24 @@
+{
+  "name": "telegram-bot",
+  "description": "Simple Telegram bot powered by ChatGPT.",
+  "keywords": ["telegram", "chatbot", "gpt", "ai"],
+  "env": {
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "Telegram bot token",
+      "generator": "secret"
+    },
+    "OPENAI_API_KEY": {
+      "description": "OpenAI API key",
+      "generator": "secret"
+    }
+  },
+  "addons": ["heroku-postgresql"],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "scripts": {
+    "start": "python bot.py"
+  }
+}
