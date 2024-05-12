@@ -3,7 +3,7 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Callb
 import openai
 
 # ChatGPT API anahtarını buraya yerleştirin
-openai.api_key = 'YOUR_OPENAI_API_KEY'
+openai.api_key = 'org-APZ1RvFDLEPYNLKKompaMcA7'
 
 def start(update: Update, context: CallbackContext) -> None:
     update.message.reply_text('Bot başlatıldı. Hoş geldiniz!')
@@ -21,7 +21,7 @@ def echo(update: Update, context: CallbackContext) -> None:
     update.message.reply_text(bot_response)
 
 def main() -> None:
-    updater = Updater("YOUR_BOT_TOKEN")
+    updater = Updater("7058332898:AAGjj8xEPoJpIRQCvkXT5iDfrQ9IKLhIYyI")
     dispatcher = updater.dispatcher
 
     dispatcher.add_handler(CommandHandler("start", start))
